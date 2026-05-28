@@ -1,0 +1,52 @@
+{
+  "name": "letterboxd-rss",
+  "version": "0.1.0",
+  "description": "Zero-dependency, strictly-typed fetcher and parser for a Letterboxd user's public diary RSS feed.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "LICENSE", "README.md"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "letterboxd",
+    "rss",
+    "diary",
+    "films",
+    "movies",
+    "feed",
+    "parser",
+    "typescript"
+  ],
+  "author": "Anthony Liddle",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthony-liddle/letterboxd-rss.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.33.2",
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.10.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}
