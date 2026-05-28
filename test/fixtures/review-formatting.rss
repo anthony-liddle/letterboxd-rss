@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:letterboxd="https://letterboxd.com" xmlns:tmdb="https://themoviedb.org" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>Letterboxd - testuser</title>
+		<link>https://letterboxd.com/testuser/</link>
+		<description>Letterboxd - testuser</description>
+			<item> <title>Formatting Test, 2020 - ★★★★</title> <link>https://letterboxd.com/testuser/film/formatting-test/</link> <guid isPermaLink="false">letterboxd-review-9000000001</guid> <pubDate>Mon, 25 May 2026 10:41:01 +1200</pubDate> <letterboxd:watchedDate>2026-05-24</letterboxd:watchedDate> <letterboxd:rewatch>No</letterboxd:rewatch> <letterboxd:filmTitle>Formatting Test</letterboxd:filmTitle> <letterboxd:filmYear>2020</letterboxd:filmYear> <letterboxd:memberRating>4.0</letterboxd:memberRating> <letterboxd:memberLike>Yes</letterboxd:memberLike> <tmdb:movieId>999999</tmdb:movieId> <description><![CDATA[ <p><img src="https://a.ltrbxd.com/resized/film-poster/9/9/9/formatting-test-0-600-0-900-crop.jpg"/></p> <p>This is <strong>bold</strong> and <b>also bold</b>, with <em>emphasis</em> and <i>italics</i>. Read <a href="https://example.com/full-review">my full review</a> for more. <blockquote>A memorable quote.</blockquote></p> ]]></description> <dc:creator>testuser</dc:creator> </item>
+	</channel>
+</rss>
