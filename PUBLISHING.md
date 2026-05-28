@@ -51,6 +51,15 @@ match the workflow EXACTLY (a mismatch makes publishes fail with a 404):
 - Workflow filename: `release.yml`
 - Environment: `npm-publish`
 
+Then, under "Allowed actions" (at least one must be selected), check
+"Allow npm publish" and leave "Allow npm stage publish" unchecked, since the
+release workflow runs a plain `npm publish` rather than the staged two-step flow.
+Finally, click "Set up connection".
+
+The separate "Publishing access" section on the same page (the two-factor
+authentication options) does not need changing: npm notes that trusted publishers
+keep working regardless of which option is selected there.
+
 ### Step c. Enable branch protection on `main` (GitHub, once, after CI is green)
 
 After the CI workflow has run at least once on `main` so the check is registered,
