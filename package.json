@@ -14,12 +14,13 @@
   },
   "files": [
     "dist",
+    "src",
     "LICENSE",
     "README.md"
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "tsup",
+    "build": "tsup && tsc -p tsconfig.build.json",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "biome check .",
@@ -50,7 +51,7 @@
     "@biomejs/biome": "^2.4.16",
     "@types/node": "^25.9.1",
     "tsup": "^8.5.0",
-    "typescript": "^5.7.3",
+    "typescript": "^6.0.3",
     "vitest": "^4.1.7"
   }
 }
