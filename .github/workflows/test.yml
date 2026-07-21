@@ -1,0 +1,52 @@
+name: CI
+
+# Validates every push to main and every pull request. This "test" job is the
+# check branch protection requires; it never publishes anything. Both matrix
+# legs must pass, and fail-fast is off so a failure on one Node version still
+# reports a result for the other.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [20, 22]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm run typecheck
+
+      - name: Lint
+        run: pnpm run lint
+
+      - name: Test
+        run: pnpm run test:coverage
+
+      - name: Build
+        run: pnpm run build
+
+      # Runs after the build because it imports dist/. This is what catches a
+      # build-tool regression on the prototype fixup in src/errors.ts, which no
+      # source-level test can see.
+      - name: Test built output
+        run: pnpm run test:dist

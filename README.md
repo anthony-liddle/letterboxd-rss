@@ -1,5 +1,6 @@
 # letterboxd-rss
 
+[![npm version](https://img.shields.io/npm/v/letterboxd-rss.svg)](https://www.npmjs.com/package/letterboxd-rss)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#why-zero-dependencies)
 
