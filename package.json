@@ -25,14 +25,14 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "test:dist": "pnpm build && vitest run --config vitest.dist.config.ts",
-    "lint": "biome check .",
+    "lint": "biome check --error-on-warnings .",
     "format": "biome format --write .",
     "typecheck": "tsc --noEmit",
     "prepare": "husky"
   },
   "lint-staged": {
     "*.{ts,js}": [
-      "biome check --write --no-errors-on-unmatched"
+      "biome check --write --error-on-warnings --no-errors-on-unmatched"
     ],
     "*.json": [
       "biome format --write --no-errors-on-unmatched"
