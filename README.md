@@ -10,6 +10,9 @@ Letterboxd has no official API, so the public RSS feed at `https://letterboxd.co
 
 > Early release (0.1.0). It is usable today, but the API may still evolve before 1.0, so pin a version if you depend on it.
 
+Published on npm as
+**[`letterboxd-rss`](https://www.npmjs.com/package/letterboxd-rss)**.
+
 ## Install
 
 ```sh
