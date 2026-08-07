@@ -54,6 +54,10 @@
     "type": "git",
     "url": "git+https://github.com/anthony-liddle/letterboxd-rss.git"
   },
+  "homepage": "https://github.com/anthony-liddle/letterboxd-rss#readme",
+  "bugs": {
+    "url": "https://github.com/anthony-liddle/letterboxd-rss/issues"
+  },
   "engines": {
     "node": ">=20"
   },
